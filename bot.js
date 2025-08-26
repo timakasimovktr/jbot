@@ -68,8 +68,27 @@ bot.start(async (ctx) => {
     },
     {
       caption: "Bu video sizga kurs haqida ko‘proq ma’lumot beradi.",
-      supports_streaming: true, 
-      thumb: { source: "qqqq.png" }, 
+      supports_streaming: true,
+      thumb: { source: "qqqq.png" },
+    }
+  );
+
+  await ctx.reply(
+    "🔥 Maxsus aksya!\n\n" +
+      "Do‘stlar, bizda katta yangilik bor! 🎉\n" +
+      "Kursimizning narxi 399 000 so‘m bo‘lgan bo‘lsa, endi faqat 99 000 so‘m 💥\n\n" +
+      "✨ Bundan tashqari, sizga bonus .PDF qo‘llanma ham sovg‘a qilamiz!\n\n" +
+      "⏳ Diqqat! Bu narx faqat 24 soat amal qiladi.\n" +
+      "Shoshiling, aksiya tugaganidan keyin eski narx qaytadi.\n\n" +
+      "👉 Hoziroq o‘qishni boshlang va bonusni qo‘lga kiriting!"
+  );
+
+  await ctx.replyWithDocument(
+    {
+      source: "bonus.pdf",
+    },
+    {
+      caption: "Bu sizning bonus .PDF qo‘llanma."
     }
   );
 
