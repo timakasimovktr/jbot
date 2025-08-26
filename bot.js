@@ -63,13 +63,19 @@ bot.start(async (ctx) => {
   await ctx.reply(COURSE_PLAN, { parse_mode: "Markdown" });
 
   await ctx.replyWithVideo(
-    { source: "lesson.mp4" },
-    { caption: "Bu video sizga kurs haqida ko‘proq ma’lumot beradi." }
+    {
+      source: "lesson.mp4",
+    },
+    {
+      caption: "Bu video sizga kurs haqida ko‘proq ma’lumot beradi.",
+      supports_streaming: true, 
+      thumb: { source: "qqqq.png" }, 
+    }
   );
 
   await ctx.reply(
     "📌 *Kursga qo‘shilish uchun:*\n\n" +
-      "1\\. 399 000 so‘mni quyidagi kartaga o‘tkazing 💳\n" +
+      "1\\. 99 000 so‘mni quyidagi kartaga o‘tkazing 💳\n" +
       "```K.T. 8600 5729 9639 7647```\n\n" +
       "2\\. To‘lov skrinshotini shu yerga yuboring ✅",
     {
